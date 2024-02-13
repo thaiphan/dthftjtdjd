@@ -12,10 +12,10 @@ const MyRoutes = () => {
             <header className="header">
               <ul>
                 <li>
-                  <Link to="/">profile</Link>
+                  <Link to="/settings">settings</Link>
                 </li>
                 <li>
-                  <Link to="/account">account</Link>
+                  <Link to="/settings/account">account</Link>
                 </li>
               </ul>
             </header>
@@ -23,16 +23,20 @@ const MyRoutes = () => {
           </div>
         }
       >
-        <Route path="/" element={<Settings />} />
-        <Route path="/account" element={<Account />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/settings/account" element={<Account />} />
       </Route>
     </Routes>
   );
 };
 
-function App() {
+interface AppProps {
+  basename?: string;
+}
+
+function App(props: AppProps) {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename={props.basename}>
       <MyRoutes />
     </BrowserRouter>
   );
