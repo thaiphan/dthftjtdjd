@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  background-color: #f3f4f6;
+  min-height: 100%;
+  padding: 2rem;
+}
+
+.header {
+  background-color: #fde68a;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+
+  ul {
+    display: flex;
+    column-gap: 1rem;
+    list-style: none;
+
+    li a {
+      color: black;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+article {
+  h1 {
+    margin-block-end: 1rem;
+  }
+
+  p {
+    margin-block-start: 1rem;
+  }
+}

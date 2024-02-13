@@ -6,11 +6,11 @@ export default function Account() {
   }, []);
 
   return (
-    <div className="App">
+    <article>
       <h1>account</h1>
       <button onClick={handleClick} type="button">
         submit
       </button>
-    </div>
+    </article>
   );
 }

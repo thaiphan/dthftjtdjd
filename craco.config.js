@@ -11,8 +11,7 @@ module.exports = {
           exposes: {
             "./App": "./src/App",
           },
-          shared:
-            process.env.NODE_ENV === "production" ? ["react", "react-dom"] : [],
+          shared: ["react", "react-dom"],
         })
       );
       return config;
